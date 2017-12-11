@@ -24,4 +24,10 @@ public class MenuManager : MonoBehaviour {
         menues[menuIndex].SetActive(true);
     }
 
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
