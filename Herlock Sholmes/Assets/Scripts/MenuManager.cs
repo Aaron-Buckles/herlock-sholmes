@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 
@@ -10,7 +11,22 @@ public class MenuManager : MonoBehaviour {
     
     void Start()
     {
-        OpenMenu(0);
+        // This try block is temporary
+        try
+        {
+            OpenMenu(0);
+        }
+        catch(System.IndexOutOfRangeException)
+        {
+            Debug.Log("Index out of range");
+        }
+    }
+
+
+    public void ContinueGame()
+    {
+        // This is temporary
+        SceneManager.LoadScene(1);
     }
 
 
