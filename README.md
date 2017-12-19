@@ -4,10 +4,11 @@ A point and click adventure/mystery game made in Unity for VGDC at UCI
 ## Git Workflow Cheatsheet
 ### Working on develop branch
 1. `git branch develop`
-2. Make changes
-3. `git add .`
-4. `git commit -m "This is my message..."`
-5. `git push -u origin develop`
+2. `git pull`
+3. Make changes
+4. `git add .`
+5. `git commit -m "This is my message..."`
+6. `git push -u origin develop`
 
 
 ### Updating the master branch
