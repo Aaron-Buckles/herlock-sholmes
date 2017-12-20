@@ -207,7 +207,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -249,9 +249,10 @@ MonoBehaviour:
   players:
   - {fileID: 1677850697}
   - {fileID: 819822111}
-  movementSmoothness: 0.5
+  movementSmoothness: 0.2
   zoomSmoothness: 0.3
-  maxZoom: 6
+  cameraPadding: 3
+  maxZoom: 7
   minZoom: 30
 --- !u!1001 &771770730
 Prefab:

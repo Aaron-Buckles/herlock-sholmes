@@ -8,8 +8,8 @@ public class FollowPlayers : MonoBehaviour {
     public Transform[] players;
     [Space]
     public float movementSmoothness = 0.5f;
-    [Space]
     public float zoomSmoothness = 0.5f;
+    public float cameraPadding = 1f;
     public float maxZoom = 5f;
     public float minZoom = 30f;
 
@@ -48,7 +48,9 @@ public class FollowPlayers : MonoBehaviour {
     private void Zoom()
     {
         float distance = Distance(players[0], players[1]);
-        float zoomLevel = Mathf.Clamp(distance / 1.5f, maxZoom, minZoom);
+        float value = (distance / 1.5f) + cameraPadding;
+
+        float zoomLevel = Mathf.Clamp(value, maxZoom, minZoom);
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomLevel, zoomSmoothness);
     }
 
