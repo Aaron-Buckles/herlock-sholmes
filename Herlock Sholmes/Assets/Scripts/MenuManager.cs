@@ -26,7 +26,7 @@ public class MenuManager : MonoBehaviour {
     public void ContinueGame()
     {
         // This is temporary
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
 
