@@ -1,5 +1,5 @@
 # Herlock Sholmes
-A point and click adventure/mystery game made in Unity for VGDC at UCI
+A stealthy top-down action game made in Unity for VGDC at UCI
 
 ## Git Workflow Cheatsheet
 ### Working on develop branch
