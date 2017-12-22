@@ -17,7 +17,13 @@ public class PlayerController : MonoBehaviour {
     [Header("Player Properties")]
     [Space]
     public float speed = 0.123f;
+    public float actionBoxOffset = 0.8f;
 
+    [Header("References")]
+    [Space]
+    public GameObject hitbox;
+
+    // Private variables
     Rigidbody2D rb;
     float[] direction = new float[] { 0, 0 };
 
@@ -30,7 +36,16 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        MovementDirection();
+        FindMovementDirection();
+
+        if (ActionKeyDown() && (Mathf.Abs(direction[0]) == 1 ^ Mathf.Abs(direction[1]) == 1))
+        {
+            ActivateHitbox();
+        }
+        else
+        {
+            hitbox.SetActive(false);
+        }
     }
 
 
@@ -42,38 +57,62 @@ public class PlayerController : MonoBehaviour {
 
     private void Move()
     {
-        transform.Translate(new Vector3(direction[0] * speed, direction[1] * speed, 0));
+        if (ActionKeyDown() == false)
+        {
+            transform.Translate(new Vector3(direction[0] * speed, direction[1] * speed, 0));
+        }
     }
 
 
-    private void MovementDirection()
+    private void ActivateHitbox()
+    {
+        hitbox.SetActive(true);
+
+        Vector3 offsetPosition = new Vector3(direction[0] * actionBoxOffset, direction[1] * actionBoxOffset, transform.position.z);
+        Vector3 position = offsetPosition + transform.position;
+
+        hitbox.transform.position = position;
+    }
+
+    
+    private bool ActionKeyDown()
+    {
+        if (Input.GetKey(actionKey))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+    private void FindMovementDirection()
     {
         direction = new float[] { 0, 0 };
 
-        if(Input.GetKey(actionKey) == false)
+        if (Input.GetKey(upKey))
         {
-            if (Input.GetKey(upKey))
-            {
-                direction[1]++;
-            }
-
-            if (Input.GetKey(downKey))
-            {
-                direction[1]--;
-            }
-
-            if (Input.GetKey(rightKey))
-            {
-                direction[0]++;
-            }
-
-            if (Input.GetKey(leftKey))
-            {
-                direction[0]--;
-            }
-
-            LimitDiagonalSpeed();
+            direction[1]++;
         }
+
+        if (Input.GetKey(downKey))
+        {
+            direction[1]--;
+        }
+
+        if (Input.GetKey(rightKey))
+        {
+            direction[0]++;
+        }
+
+        if (Input.GetKey(leftKey))
+        {
+            direction[0]--;
+        }
+
+        LimitDiagonalSpeed();
     }
 
 
