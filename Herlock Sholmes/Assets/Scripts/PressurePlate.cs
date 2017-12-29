@@ -6,9 +6,39 @@ public class PressurePlate : MonoBehaviour {
 
     public GameObject interactableObject;
 
-	void OnTriggerEnter2D(Collider2D col)
+    private Interactable interactable;
+
+
+    void Start()
     {
-        interactableObject.GetComponent<Interactable>().PerformAction();
+        interactable = interactableObject.GetComponent<Interactable>();
+    }
+
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag != "Hitbox" && interactable.actionPerformed == false)
+        {
+            interactable.PerformAction();
+        }
+    }
+
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.tag != "Hitbox" && interactable.actionPerformed)
+        {
+            interactable.UnPerformAction();
+        }
+    }
+
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.tag != "Hitbox")
+        {
+            interactable.PerformAction();
+        }
     }
 
 }

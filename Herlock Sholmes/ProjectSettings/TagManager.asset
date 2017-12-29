@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Hitbox
   layers:
   - Default
   - TransparentFX

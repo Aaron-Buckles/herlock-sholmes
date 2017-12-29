@@ -4,25 +4,48 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
 
+    [HideInInspector]
+    public bool actionPerformed = false;
+
 	public void PerformAction()
     {
         if(gameObject.tag == "Door")
         {
-            Collider2D doorCollider = gameObject.GetComponent<Collider2D>();
-            SpriteRenderer doorSpriteRender = gameObject.GetComponent<SpriteRenderer>();
-            bool doorOpen = doorCollider.isTrigger;
-
-            if (doorOpen)
-            {
-                doorCollider.isTrigger = false;
-                doorSpriteRender.enabled = true;
-            }
-            else
-            {
-                doorCollider.isTrigger = true;
-                doorSpriteRender.enabled = false;
-            }
+            OpenDoor();
         }
+    }
+
+
+    public void UnPerformAction()
+    {
+        if (gameObject.tag == "Door")
+        {
+            CloseDoor();
+        }
+    }
+
+
+    private void OpenDoor()
+    {
+        Collider2D doorCollider = gameObject.GetComponent<Collider2D>();
+        SpriteRenderer doorSpriteRender = gameObject.GetComponent<SpriteRenderer>();
+
+        actionPerformed = true;
+
+        doorCollider.isTrigger = true;
+        doorSpriteRender.enabled = false;
+    }
+
+
+    private void CloseDoor()
+    {
+        Collider2D doorCollider = gameObject.GetComponent<Collider2D>();
+        SpriteRenderer doorSpriteRender = gameObject.GetComponent<SpriteRenderer>();
+
+        actionPerformed = false;
+
+        doorCollider.isTrigger = false;
+        doorSpriteRender.enabled = true;
     }
 
 }
