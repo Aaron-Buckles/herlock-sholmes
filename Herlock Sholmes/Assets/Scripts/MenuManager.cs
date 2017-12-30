@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour {
 
@@ -38,6 +39,8 @@ public class MenuManager : MonoBehaviour {
         }
 
         menues[menuIndex].SetActive(true);
+        Button[] buttons = menues[menuIndex].GetComponentsInChildren<Button>(true);
+        buttons[0].Select();
     }
 
 
