@@ -6,11 +6,13 @@ using TMPro;
 
 public class SettingsManager : MonoBehaviour {
 
-    public TMP_Dropdown resDropdown;
+    public TMP_Text currentResDisplay;
 
     Resolution[] resolutions;
-    int nativeWidth;
-    int nativeHeight;
+    private int nativeWidth;
+    private int nativeHeight;
+
+    private int currentResIndex = 0;
 
 
     void Awake()
@@ -19,36 +21,70 @@ public class SettingsManager : MonoBehaviour {
         nativeHeight = Screen.currentResolution.height;
 
         resolutions = Screen.resolutions;
-        PopulateResDropdown();
+        currentResIndex = FindCurrentResolution();
     }
 
 
-    private void PopulateResDropdown()
+    private int FindCurrentResolution()
     {
-        int resIndex = 0;
-
-        resDropdown.ClearOptions();
-
         for (int i = 0; i < resolutions.Length; i++)
         {
             Resolution res = resolutions[i];
 
             if (res.width == nativeWidth && res.height == nativeHeight)
             {
-                resIndex = i;
+                return i;
             }
-
-            AddResolution(res);
         }
 
-        resDropdown.value = resIndex;
-        resDropdown.RefreshShownValue();
+        return 0;
     }
 
 
-    private void AddResolution(Resolution res)
+    public void NextRes()
     {
-        resDropdown.options.Add(new TMP_Dropdown.OptionData { text = res.width + " x " + res.height });
+        if (currentResIndex >= resolutions.Length - 1)
+        {
+            currentResIndex = 0;
+        }
+        else
+        {
+            currentResIndex += 1;
+        }
+
+        DisplayCurrentRes();
+    }
+
+
+    public void PrevRes()
+    {
+        if (currentResIndex <= 0)
+        {
+            currentResIndex = resolutions.Length - 1;
+        }
+        else
+        {
+            currentResIndex -= 1;
+        }
+
+        DisplayCurrentRes();
+    }
+
+
+    private void DisplayCurrentRes()
+    {
+        Resolution currentRes = resolutions[currentResIndex];
+        string width = currentRes.width.ToString();
+        string height = currentRes.height.ToString();
+
+        currentResDisplay.text = width + " x " + height;
+    }
+
+
+    public void SetResolution()
+    {
+        Resolution desiredRes = resolutions[currentResIndex];
+        Screen.SetResolution(desiredRes.width, desiredRes.height, Screen.fullScreen);
     }
 
 
@@ -56,12 +92,4 @@ public class SettingsManager : MonoBehaviour {
     {
         Screen.fullScreen = toggleOn;
     }
-
-
-    public void SetResolution(int resIndex)
-    {
-        Resolution desiredRes = resolutions[resIndex];
-        Screen.SetResolution(desiredRes.width, desiredRes.height, Screen.fullScreen);
-    }
-
 }
