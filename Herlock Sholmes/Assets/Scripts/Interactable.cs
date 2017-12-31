@@ -4,8 +4,32 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
 
-    [HideInInspector]
-    public bool actionPerformed = false;
+    public GameObject[] triggerObjects;
+
+
+    void Update()
+    {
+        CheckTriggers();
+    }
+
+
+    void CheckTriggers()
+    {
+        foreach (GameObject trigger in triggerObjects)
+        {
+            if (trigger.tag == "PressurePlate")
+            {
+                if (trigger.GetComponent<PressurePlate>().triggered)
+                {
+                    PerformAction();
+                    return;
+                }
+            }
+        }
+
+        UnPerformAction();
+    }
+
 
 	public void PerformAction()
     {
@@ -30,8 +54,6 @@ public class Interactable : MonoBehaviour {
         Collider2D doorCollider = gameObject.GetComponent<Collider2D>();
         SpriteRenderer doorSpriteRender = gameObject.GetComponent<SpriteRenderer>();
 
-        actionPerformed = true;
-
         doorCollider.isTrigger = true;
         doorSpriteRender.enabled = false;
     }
@@ -41,8 +63,6 @@ public class Interactable : MonoBehaviour {
     {
         Collider2D doorCollider = gameObject.GetComponent<Collider2D>();
         SpriteRenderer doorSpriteRender = gameObject.GetComponent<SpriteRenderer>();
-
-        actionPerformed = false;
 
         doorCollider.isTrigger = false;
         doorSpriteRender.enabled = true;

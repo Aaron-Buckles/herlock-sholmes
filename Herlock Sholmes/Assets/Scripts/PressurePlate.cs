@@ -2,43 +2,127 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Collider2D))]
 public class PressurePlate : MonoBehaviour {
 
-    public GameObject interactableObject;
+    public bool sticky = false;
+    public bool timed = false;
+    public float amountOfTime = 1f;
 
-    private Interactable interactable;
+    [Space]
+    public Sprite stickySprite;
+    public Sprite timedSprite;
+    public Sprite defaultSprite;
+
+    [HideInInspector]
+    public bool triggered = false;
+
+    private SpriteRenderer spriteRenderer;
+    private Collider2D pressurePlateCollider;
 
 
-    void Start()
+    void Awake()
     {
-        interactable = interactableObject.GetComponent<Interactable>();
+        if (sticky && timed)
+        {
+            Debug.LogWarning("Pressure plate cannot be sticky and timed");
+        }
+
+        pressurePlateCollider = gameObject.GetComponent<Collider2D>();
+
+        SetSprite();
+    }
+
+
+    void SetSprite()
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        if (sticky)
+        {
+            spriteRenderer.sprite = stickySprite;
+        }
+        else if (timed)
+        {
+            spriteRenderer.sprite = timedSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = defaultSprite;
+        }
     }
 
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag != "Hitbox" && interactable.actionPerformed == false)
+        if (sticky)
         {
-            interactable.PerformAction();
+            StickyEnter(col);
+        }
+        else if (timed)
+        {
+            TimedEnter(col);
+        }
+        else
+        {
+            DefaultEnter(col);
         }
     }
 
 
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.tag != "Hitbox" && interactable.actionPerformed)
+        if (!sticky && !timed)
         {
-            interactable.UnPerformAction();
+            DefaultExit(col);
         }
     }
 
 
-    void OnTriggerStay2D(Collider2D col)
+    void StickyEnter(Collider2D col)
     {
         if (col.tag != "Hitbox")
         {
-            interactable.PerformAction();
+            triggered = !triggered;
         }
     }
 
+
+    void TimedEnter(Collider2D col)
+    {
+        pressurePlateCollider.enabled = false;
+        triggered = true;
+
+        StopCoroutine(TimedPressurePlate());
+        StartCoroutine(TimedPressurePlate());
+    }
+
+
+    IEnumerator TimedPressurePlate()
+    {
+        yield return new WaitForSeconds(amountOfTime);
+
+        triggered = false;
+        pressurePlateCollider.enabled = true;
+    }
+
+
+    void DefaultEnter(Collider2D col)
+    {
+        if (col.tag != "Hitbox")
+        {
+            triggered = true;
+        }
+    }
+
+
+    void DefaultExit(Collider2D col)
+    {
+        if (col.tag != "Hitbox")
+        {
+            triggered = false;
+        }
+    }
 }

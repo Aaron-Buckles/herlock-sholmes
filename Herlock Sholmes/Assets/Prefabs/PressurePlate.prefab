@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 212079848504222466}
   m_Layer: 0
   m_Name: PressurePlate
-  m_TagString: Untagged
+  m_TagString: PressurePlate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adf2e87fcaf37046931cc8342fcc626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 0}
+  sticky: 0
+  timed: 0
+  amountOfTime: 1
+  stickySprite: {fileID: 21300000, guid: 4bc8b6eab6b754b48b6b191ac8ef933e, type: 3}
+  timedSprite: {fileID: 21300000, guid: a355eb8363ec8f240be9ec6e94d91223, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 6bff467ea140a2d4b9aac1e1835afcf8, type: 3}
+  triggered: 0
 --- !u!212 &212079848504222466
 SpriteRenderer:
   m_ObjectHideFlags: 1
