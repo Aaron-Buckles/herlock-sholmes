@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour {
     }
 
 
-    void CheckTriggers()
+    private void CheckTriggers()
     {
         foreach (GameObject trigger in triggerObjects)
         {

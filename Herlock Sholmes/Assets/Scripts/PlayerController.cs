@@ -4,33 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    [Header("Controls")]
-    [Space]
-    public KeyCode upKey = KeyCode.W;
-    public KeyCode leftKey = KeyCode.A;
-    public KeyCode downKey = KeyCode.S;
-    public KeyCode rightKey = KeyCode.D;
-    [Space]
-    public KeyCode switchItemKey = KeyCode.LeftControl;
-    public KeyCode actionKey = KeyCode.LeftShift;
-
-    [Header("Player Properties")]
-    [Space]
+    public string playerNumber = "1";
     public float speed = 0.123f;
-    public float actionBoxOffset = 0.8f;
-
-    [Header("References")]
-    [Space]
     public GameObject hitbox;
 
-    // Private variables
-    Rigidbody2D rb;
-    float[] direction = new float[] { 0, 0 };
+    private float[] direction = new float[] { 0, 0 };
+    private string horizontal, vertical, action, itemSwitch;
 
-    
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        horizontal = "Horizontal" + playerNumber;
+        vertical = "Vertical" + playerNumber;
+        action = "ActionButton" + playerNumber;
+        itemSwitch = "ItemSwitch" + playerNumber;
     }
 
 
@@ -68,7 +55,7 @@ public class PlayerController : MonoBehaviour {
     {
         hitbox.SetActive(true);
 
-        Vector3 offsetPosition = new Vector3(direction[0] * actionBoxOffset, direction[1] * actionBoxOffset, transform.position.z);
+        Vector3 offsetPosition = new Vector3(direction[0], direction[1], transform.position.z);
         Vector3 position = offsetPosition + transform.position;
 
         hitbox.transform.position = position;
@@ -77,7 +64,7 @@ public class PlayerController : MonoBehaviour {
     
     private bool ActionKeyDown()
     {
-        if (Input.GetKey(actionKey))
+        if (Input.GetButton(action))
         {
             return true;
         }
@@ -90,27 +77,8 @@ public class PlayerController : MonoBehaviour {
 
     private void FindMovementDirection()
     {
-        direction = new float[] { 0, 0 };
-
-        if (Input.GetKey(upKey))
-        {
-            direction[1]++;
-        }
-
-        if (Input.GetKey(downKey))
-        {
-            direction[1]--;
-        }
-
-        if (Input.GetKey(rightKey))
-        {
-            direction[0]++;
-        }
-
-        if (Input.GetKey(leftKey))
-        {
-            direction[0]--;
-        }
+        direction[0] = Input.GetAxis(horizontal);
+        direction[1] = Input.GetAxis(vertical);
 
         LimitDiagonalSpeed();
     }

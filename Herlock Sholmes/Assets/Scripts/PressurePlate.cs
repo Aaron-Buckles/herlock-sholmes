@@ -36,7 +36,7 @@ public class PressurePlate : MonoBehaviour {
     }
 
 
-    void SetSprite()
+    private void SetSprite()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
@@ -81,7 +81,7 @@ public class PressurePlate : MonoBehaviour {
     }
 
 
-    void StickyEnter(Collider2D col)
+    private void StickyEnter(Collider2D col)
     {
         if (col.tag != "Hitbox")
         {
@@ -90,7 +90,7 @@ public class PressurePlate : MonoBehaviour {
     }
 
 
-    void TimedEnter(Collider2D col)
+    private void TimedEnter(Collider2D col)
     {
         pressurePlateCollider.enabled = false;
         triggered = true;
@@ -109,7 +109,7 @@ public class PressurePlate : MonoBehaviour {
     }
 
 
-    void DefaultEnter(Collider2D col)
+    private void DefaultEnter(Collider2D col)
     {
         if (col.tag != "Hitbox")
         {
@@ -118,7 +118,7 @@ public class PressurePlate : MonoBehaviour {
     }
 
 
-    void DefaultExit(Collider2D col)
+    private void DefaultExit(Collider2D col)
     {
         if (col.tag != "Hitbox")
         {
