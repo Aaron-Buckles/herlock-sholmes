@@ -17,13 +17,10 @@ public class Interactable : MonoBehaviour {
     {
         foreach (GameObject trigger in triggerObjects)
         {
-            if (trigger.tag == "PressurePlate")
+            if (trigger.GetComponent<Trigger>().triggered)
             {
-                if (trigger.GetComponent<PressurePlate>().triggered)
-                {
-                    PerformAction();
-                    return;
-                }
+                PerformAction();
+                return;
             }
         }
 

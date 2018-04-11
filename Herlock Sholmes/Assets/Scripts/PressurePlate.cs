@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Collider2D))]
-public class PressurePlate : MonoBehaviour {
+public class PressurePlate : Trigger {
 
     public bool sticky = false;
     public bool timed = false;
@@ -15,9 +14,6 @@ public class PressurePlate : MonoBehaviour {
     public Sprite stickySprite;
     public Sprite timedSprite;
     public Sprite defaultSprite;
-
-    [HideInInspector]
-    public bool triggered = false;
 
     private SpriteRenderer spriteRenderer;
     private Collider2D pressurePlateCollider;
