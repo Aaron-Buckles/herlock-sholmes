@@ -1,5 +1,5 @@
 # Herlock Sholmes
-A stealthy top-down puzzle game made in Unity for VGDC at UCI
+A stealthy top-down puzzle game made in Unity for VGDC at UCI in Spring of 2018
 
 ## Todo
 
