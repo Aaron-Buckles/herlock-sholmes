@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour {
 
     public GameObject[] triggerObjects;
+    public string optionalArgument;
 
 
     void Update()
@@ -30,9 +32,17 @@ public class Interactable : MonoBehaviour {
 
 	public void PerformAction()
     {
-        if(gameObject.tag == "Door")
+        if (gameObject.tag == "Door")
         {
             OpenDoor();
+        }
+        else if (gameObject.tag == "DialogueManager")
+        {
+            StartDialogue();
+        }
+        else if (gameObject.tag == "NextLevel")
+        {
+            NextLevel();
         }
     }
 
@@ -43,6 +53,19 @@ public class Interactable : MonoBehaviour {
         {
             CloseDoor();
         }
+    }
+
+
+    private void NextLevel()
+    {
+        SceneManager.LoadScene(optionalArgument);
+    }
+
+
+    private void StartDialogue()
+    {
+        DialogueManager dm = gameObject.GetComponent<DialogueManager>();
+        dm.StartDialogueScene(optionalArgument);
     }
 
 

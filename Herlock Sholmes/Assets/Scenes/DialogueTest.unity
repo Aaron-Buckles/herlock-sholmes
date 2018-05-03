@@ -392,6 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1149969850}
   dialogueFileName: testDialogue.json
+  firstScene: 
   speakerNameText: {fileID: 1230976684}
   dialogueText: {fileID: 207956684}
 --- !u!4 &363920476
@@ -435,8 +436,8 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
+  m_HorizontalAxis: Horizontal1
+  m_VerticalAxis: Vertical1
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -629,11 +630,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1084386775}
     m_Modifications:
-    - target: {fileID: 114116220926045510, guid: 694db41d0ec95ff41a17556f4475ded3,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224354994129167416, guid: 694db41d0ec95ff41a17556f4475ded3,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -724,26 +720,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114459314618484260, guid: 694db41d0ec95ff41a17556f4475ded3,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114459314618484260, guid: 694db41d0ec95ff41a17556f4475ded3,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114519462821270280, guid: 694db41d0ec95ff41a17556f4475ded3,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114519462821270280, guid: 694db41d0ec95ff41a17556f4475ded3,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114720381753774396, guid: 694db41d0ec95ff41a17556f4475ded3,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -753,40 +729,31 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075692180218048, guid: 694db41d0ec95ff41a17556f4475ded3, type: 2}
-      propertyPath: m_Name
-      value: DialogueText
-      objectReference: {fileID: 0}
-    - target: {fileID: 114116220926045510, guid: 694db41d0ec95ff41a17556f4475ded3,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114116220926045510, guid: 694db41d0ec95ff41a17556f4475ded3,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114116220926045510, guid: 694db41d0ec95ff41a17556f4475ded3,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 363920475}
-    - target: {fileID: 224122964709927540, guid: 694db41d0ec95ff41a17556f4475ded3,
+    - target: {fileID: 114459314618484260, guid: 694db41d0ec95ff41a17556f4475ded3,
         type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 582.8
+      propertyPath: m_havePropertiesChanged
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114116220926045510, guid: 694db41d0ec95ff41a17556f4475ded3,
+    - target: {fileID: 114459314618484260, guid: 694db41d0ec95ff41a17556f4475ded3,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowNextLine
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114116220926045510, guid: 694db41d0ec95ff41a17556f4475ded3,
+    - target: {fileID: 114519462821270280, guid: 694db41d0ec95ff41a17556f4475ded3,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114519462821270280, guid: 694db41d0ec95ff41a17556f4475ded3,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 694db41d0ec95ff41a17556f4475ded3, type: 2}
@@ -854,6 +821,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10

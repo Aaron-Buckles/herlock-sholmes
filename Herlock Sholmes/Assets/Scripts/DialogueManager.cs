@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour {
 
     public Animator animator;
     public string dialogueFileName;
+    public string firstScene;
     [Space]
     public TMP_Text speakerNameText;
     public TMP_Text dialogueText;
@@ -23,6 +24,12 @@ public class DialogueManager : MonoBehaviour {
     void Awake()
     {
         dialogueData = LoadDialogueScenes(dialogueFileName);
+    }
+
+
+    void Start()
+    {
+        StartDialogueScene(firstScene);    
     }
 
 
