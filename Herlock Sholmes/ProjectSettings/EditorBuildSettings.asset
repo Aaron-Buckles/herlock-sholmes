@@ -8,15 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 1bba5f93fa38ac24299477010bb67153
-  - enabled: 1
-    path: Assets/Scenes/DialogueTest.unity
-    guid: 14bc986763a071a4987b0e268ef59deb
-  - enabled: 1
-    path: Assets/Scenes/DemoLevel.unity
-    guid: 5b59670013fb8a84caaf44ea5b3023f1
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/39460207122ec544faf1b8175d4e9669
+    guid: 39460207122ec544faf1b8175d4e9669
   - enabled: 1
     path: Assets/Scenes/Level1.unity
-    guid: 22cca11e21b46e44a93f3cfffb0a8013
+    guid: 02cd09537625f644ba95249ffabaea42
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/1ca5577a27a336546960805c1d70eddd
+    guid: 1ca5577a27a336546960805c1d70eddd
   - enabled: 1
     path: Assets/Scenes/Level2.unity
-    guid: 39460207122ec544faf1b8175d4e9669
+    guid: 7be2e93d9161c3e468020e22bda71433

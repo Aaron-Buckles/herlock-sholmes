@@ -1,0 +1,27 @@
+[
+	{
+		"sceneName": "test1",
+		"dialogue": [
+			{
+				"name": "Herlock Sholmes",
+				"line": "Hello, my name is Herlock Sholmes"
+			},
+			{
+				"name": "Herlock Sholmes",
+				"line": "This is my partner Wohn Jatson, say hello Wohn"
+			},
+			{
+				"name": "Wohn Jatson",
+				"line": "Hello everybody, how's it going?"
+			},
+      {
+        "name": "Herlock Sholmes",
+        "line": "Good boy Wohn"
+      },
+      {
+        "name": "Aaron Buckles",
+        "line": "You guys make such a great couple..."
+      }
+		]
+	}
+]

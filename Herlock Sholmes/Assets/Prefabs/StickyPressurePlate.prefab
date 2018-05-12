@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4075131482523476}
-  - component: {fileID: 114592166049461906}
   - component: {fileID: 61706637549904810}
   - component: {fileID: 212079848504222466}
+  - component: {fileID: 114592166049461906}
   m_Layer: 0
   m_Name: StickyPressurePlate
   m_TagString: PressurePlate
@@ -78,13 +78,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adf2e87fcaf37046931cc8342fcc626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggered: 0
   sticky: 1
   timed: 0
   amountOfTime: 1
   stickySprite: {fileID: 21300000, guid: 4bc8b6eab6b754b48b6b191ac8ef933e, type: 3}
   timedSprite: {fileID: 21300000, guid: a355eb8363ec8f240be9ec6e94d91223, type: 3}
   defaultSprite: {fileID: 21300000, guid: 6bff467ea140a2d4b9aac1e1835afcf8, type: 3}
-  triggered: 0
 --- !u!212 &212079848504222466
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -116,8 +116,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1898749701
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6bff467ea140a2d4b9aac1e1835afcf8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
