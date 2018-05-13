@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1986164640113276}
+  m_RootGameObject: {fileID: 1565727994839426}
   m_IsPrefabParent: 1
---- !u!1 &1986164640113276
+--- !u!1 &1565727994839426
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4075131482523476}
-  - component: {fileID: 61706637549904810}
-  - component: {fileID: 212079848504222466}
-  - component: {fileID: 114592166049461906}
+  - component: {fileID: 4420701796378384}
+  - component: {fileID: 212864938263220602}
+  - component: {fileID: 61498939463972466}
+  - component: {fileID: 114016649447691584}
   m_Layer: 0
   m_Name: StickyPressurePlate
-  m_TagString: PressurePlate
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4075131482523476
+--- !u!4 &4420701796378384
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1986164640113276}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 0.5, z: 0}
+  m_GameObject: {fileID: 1565727994839426}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61706637549904810
+--- !u!61 &61498939463972466
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1986164640113276}
+  m_GameObject: {fileID: 1565727994839426}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -58,39 +58,33 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.75}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.75}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114592166049461906
+--- !u!114 &114016649447691584
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1986164640113276}
+  m_GameObject: {fileID: 1565727994839426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9adf2e87fcaf37046931cc8342fcc626, type: 3}
+  m_Script: {fileID: 11500000, guid: cac49b74fbd9c2649b6820a4a3a1e6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   triggered: 0
-  sticky: 1
-  timed: 0
-  amountOfTime: 1
-  stickySprite: {fileID: 21300000, guid: 4bc8b6eab6b754b48b6b191ac8ef933e, type: 3}
-  timedSprite: {fileID: 21300000, guid: a355eb8363ec8f240be9ec6e94d91223, type: 3}
-  defaultSprite: {fileID: 21300000, guid: 6bff467ea140a2d4b9aac1e1835afcf8, type: 3}
---- !u!212 &212079848504222466
+--- !u!212 &212864938263220602
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1986164640113276}
+  m_GameObject: {fileID: 1565727994839426}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -117,10 +111,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1898749701
-  m_SortingLayer: -1
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6bff467ea140a2d4b9aac1e1835afcf8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a5cd3633d6cefc94d9bf1255a0309071, type: 3}
+  m_Color: {r: 0.2967128, g: 0.7205882, b: 0.36979476, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

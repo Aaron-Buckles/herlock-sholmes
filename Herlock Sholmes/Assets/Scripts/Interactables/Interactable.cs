@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
 
-    public GameObject[] triggerObjects;
+    public Trigger[] triggerObjects;
 
     void Update()
     {
@@ -13,9 +13,9 @@ public class Interactable : MonoBehaviour {
 
     void CheckTriggers()
     {
-        foreach ( GameObject trigger in triggerObjects )
+        foreach ( Trigger trigger in triggerObjects )
         {
-            if ( trigger.GetComponent<Trigger>().triggered )
+            if ( trigger.triggered )
             {
                 PerformAction();
                 return;
