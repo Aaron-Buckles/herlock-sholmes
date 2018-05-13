@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerGroup : Trigger {
+public class TriggerGroup : Trigger
+{
 
     public Trigger[] triggers;
 

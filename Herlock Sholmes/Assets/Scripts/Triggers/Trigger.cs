@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class Trigger : MonoBehaviour {
+public class Trigger : MonoBehaviour
+{
 
     [HideInInspector]
     public bool triggered = false;
-
 }

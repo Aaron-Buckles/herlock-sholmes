@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour {
+public class Interactable : MonoBehaviour
+{
 
     public Trigger[] triggerObjects;
 
@@ -13,9 +14,9 @@ public class Interactable : MonoBehaviour {
 
     void CheckTriggers()
     {
-        foreach ( Trigger trigger in triggerObjects )
+        foreach (Trigger trigger in triggerObjects)
         {
-            if ( trigger.triggered )
+            if (trigger.triggered)
             {
                 PerformAction();
                 return;
@@ -25,7 +26,7 @@ public class Interactable : MonoBehaviour {
         UnPerformAction();
     }
 
-	public virtual void PerformAction()
+    public virtual void PerformAction()
     {
     }
 

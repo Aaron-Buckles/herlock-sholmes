@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StickyPressurePlate : PressurePlate {
+public class StickyPressurePlate : PressurePlate
+{
 
     public override void OnTriggerEnter2D(Collider2D col)
     {

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : Interactable {
+public class Door : Interactable
+{
 
     public override void PerformAction()
     {

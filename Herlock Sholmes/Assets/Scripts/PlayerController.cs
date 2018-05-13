@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public string playerNumber = "1";
     public float speed = 0.123f;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 
     void Move()
     {
-            transform.Translate( new Vector3(direction[0] * speed, direction[1] * speed, 0) );
+        transform.Translate(new Vector3(direction[0] * speed, direction[1] * speed, 0));
     }
 
     void FindMovementDirection()
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 
     void LimitDiagonalSpeed()
     {
-        if ( direction[0] != 0 && direction[1] != 0 )
+        if (direction[0] != 0 && direction[1] != 0)
         {
             direction[0] *= .7071f;
             direction[1] *= .7071f;

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimedPressurePlate : PressurePlate {
+public class TimedPressurePlate : PressurePlate
+{
 
     public float time;
 

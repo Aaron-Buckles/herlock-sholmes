@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MenuManager : MonoBehaviour {
+public class MenuManager : MonoBehaviour
+{
 
     [Tooltip("Element 0 should be the main menu")]
     public GameObject[] menues;
 
-    
+
     void Start()
     {
         // This try block is temporary
@@ -17,7 +18,7 @@ public class MenuManager : MonoBehaviour {
         {
             OpenMenu(0);
         }
-        catch(System.IndexOutOfRangeException)
+        catch (System.IndexOutOfRangeException)
         {
             Debug.Log("Index out of range");
         }
@@ -33,7 +34,7 @@ public class MenuManager : MonoBehaviour {
 
     public void OpenMenu(int menuIndex)
     {
-        foreach(GameObject menu in menues)
+        foreach (GameObject menu in menues)
         {
             menu.SetActive(false);
         }

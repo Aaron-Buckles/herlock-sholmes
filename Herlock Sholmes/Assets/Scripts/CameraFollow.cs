@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
-public class CameraFollow : MonoBehaviour {
+public class CameraFollow : MonoBehaviour
+{
 
     public Transform[] players;
     public float smoothness;
@@ -26,15 +27,15 @@ public class CameraFollow : MonoBehaviour {
 
     void Move()
     {
-        Vector3 midpoint = Midpoint( players[0], players[1] );
-        cam.transform.position = Vector3.SmoothDamp( cam.transform.position, midpoint, ref velocity, smoothness );
+        Vector3 midpoint = Midpoint(players[0], players[1]);
+        cam.transform.position = Vector3.SmoothDamp(cam.transform.position, midpoint, ref velocity, smoothness);
     }
 
     void Zoom()
     {
-        float distance = Distance( players[0], players[1] );
-        float zoomLevel = Mathf.Clamp( distance / 2, maxZoom, minZoom );
-        cam.orthographicSize = Mathf.Lerp( cam.orthographicSize, zoomLevel, smoothness );
+        float distance = Distance(players[0], players[1]);
+        float zoomLevel = Mathf.Clamp(distance / 2, maxZoom, minZoom);
+        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomLevel, smoothness);
     }
 
     Vector3 Midpoint(Transform pos1, Transform pos2)
@@ -44,12 +45,12 @@ public class CameraFollow : MonoBehaviour {
         return new Vector3(midX, midY, cam.transform.position.z);
     }
 
-    float Distance( Transform pos1, Transform pos2 )
+    float Distance(Transform pos1, Transform pos2)
     {
         float xDiff = pos2.position.x - pos1.position.x;
         float yDiff = pos2.position.y - pos1.position.y;
 
-        return Mathf.Sqrt( Mathf.Pow(xDiff, 2) + Mathf.Pow(yDiff, 2) );
+        return Mathf.Sqrt(Mathf.Pow(xDiff, 2) + Mathf.Pow(yDiff, 2));
     }
 
 }

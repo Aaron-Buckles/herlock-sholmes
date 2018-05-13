@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class PressurePlate : Trigger {
+public class PressurePlate : Trigger
+{
 
     protected Collider2D pressurePlateCollider;
 
