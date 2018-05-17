@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: levelSpriteAtlas
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 1
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300062, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300060, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300066, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300064, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300070, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300068, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300074, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300072, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300078, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300076, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300038, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300036, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300026, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300024, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300056, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300022, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300058, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300020, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300052, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300034, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300054, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300032, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300048, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300030, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300050, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300028, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300044, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300046, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300040, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300042, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300016, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300018, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300000, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300002, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300004, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300006, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300008, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300010, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300012, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300014, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300088, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300090, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300092, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300094, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300114, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300080, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300112, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300082, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300110, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300084, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300108, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300086, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300106, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300104, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300102, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300100, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300096, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300098, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300124, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300126, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300120, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300118, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300122, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300116, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - levelSpriteSheet_31
+  - levelSpriteSheet_30
+  - levelSpriteSheet_33
+  - levelSpriteSheet_32
+  - levelSpriteSheet_35
+  - levelSpriteSheet_34
+  - levelSpriteSheet_37
+  - levelSpriteSheet_36
+  - levelSpriteSheet_39
+  - levelSpriteSheet_38
+  - levelSpriteSheet_19
+  - levelSpriteSheet_18
+  - levelSpriteSheet_13
+  - levelSpriteSheet_12
+  - levelSpriteSheet_28
+  - levelSpriteSheet_11
+  - levelSpriteSheet_29
+  - levelSpriteSheet_10
+  - levelSpriteSheet_26
+  - levelSpriteSheet_17
+  - levelSpriteSheet_27
+  - levelSpriteSheet_16
+  - levelSpriteSheet_24
+  - levelSpriteSheet_15
+  - levelSpriteSheet_25
+  - levelSpriteSheet_14
+  - levelSpriteSheet_22
+  - levelSpriteSheet_23
+  - levelSpriteSheet_20
+  - levelSpriteSheet_21
+  - levelSpriteSheet_8
+  - levelSpriteSheet_9
+  - levelSpriteSheet_0
+  - levelSpriteSheet_1
+  - levelSpriteSheet_2
+  - levelSpriteSheet_3
+  - levelSpriteSheet_4
+  - levelSpriteSheet_5
+  - levelSpriteSheet_6
+  - levelSpriteSheet_7
+  - levelSpriteSheet_44
+  - levelSpriteSheet_45
+  - levelSpriteSheet_46
+  - levelSpriteSheet_47
+  - levelSpriteSheet_57
+  - levelSpriteSheet_40
+  - levelSpriteSheet_56
+  - levelSpriteSheet_41
+  - levelSpriteSheet_55
+  - levelSpriteSheet_42
+  - levelSpriteSheet_54
+  - levelSpriteSheet_43
+  - levelSpriteSheet_53
+  - levelSpriteSheet_52
+  - levelSpriteSheet_51
+  - levelSpriteSheet_50
+  - levelSpriteSheet_48
+  - levelSpriteSheet_49
+  - levelSpriteSheet_62
+  - levelSpriteSheet_63
+  - levelSpriteSheet_60
+  - levelSpriteSheet_59
+  - levelSpriteSheet_61
+  - levelSpriteSheet_58
+  m_Tag: levelSpriteAtlas
+  m_IsVariant: 0
