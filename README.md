@@ -2,11 +2,11 @@
 A top-down puzzle game made in Unity for VGDC at UCI in Spring of 2018
 
 ## The Team
-Aaron Buckles
-Kierstin Roque
-James Tran
-Camden Kuwahara
-Brian Jiang
+- Aaron Buckles
+- Kierstin Roque
+- James Tran
+- Camden Kuwahara
+- Brian Jiang
 
 ## Git Workflow Cheatsheet
 ### Working on develop branch
