@@ -12,6 +12,13 @@ public class Collectable : MonoBehaviour
 {
     public ObjectType type;
 
+    LevelManager levelManager;
+
+    private void Start()
+    {
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -26,7 +33,7 @@ public class Collectable : MonoBehaviour
         {
             case ObjectType.Star:
                 gameObject.SetActive(false);
-                Debug.Log("Collect a star");
+                levelManager.StarCollected();
                 break;
 
             case ObjectType.Other:

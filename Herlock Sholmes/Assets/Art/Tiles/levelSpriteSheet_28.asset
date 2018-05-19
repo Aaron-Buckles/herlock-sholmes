@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: levelSpriteSheet_28
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300056, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
-  m_Color: {r: 0.5529412, g: 0.007843138, b: 0.12156863, a: 1}
+  m_Color: {r: 0.44705883, g: 0.39607844, b: 0.3019608, a: 1}
   m_Transform:
     e00: 1
     e01: 0
