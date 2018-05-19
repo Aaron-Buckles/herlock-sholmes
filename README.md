@@ -1,8 +1,12 @@
 # Herlock Sholmes
-A stealthy top-down puzzle game made in Unity for VGDC at UCI in Spring of 2018
+A top-down puzzle game made in Unity for VGDC at UCI in Spring of 2018
 
-## Todo
-
+## The Team
+Aaron Buckles
+Kierstin Roque
+James Tran
+Camden Kuwahara
+Brian Jiang
 
 ## Git Workflow Cheatsheet
 ### Working on develop branch
