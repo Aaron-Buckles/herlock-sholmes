@@ -11,6 +11,7 @@ public enum ObjectType
 public class Collectable : MonoBehaviour
 {
     public ObjectType type;
+    public int objectNumber;
 
     LevelManager levelManager;
 
@@ -23,17 +24,17 @@ public class Collectable : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            collect();
+            Collect();
         }
     }
 
-    private void collect()
+    private void Collect()
     {
         switch (type)
         {
             case ObjectType.Star:
                 gameObject.SetActive(false);
-                levelManager.StarCollected();
+                levelManager.StarCollected(objectNumber);
                 break;
 
             case ObjectType.Other:

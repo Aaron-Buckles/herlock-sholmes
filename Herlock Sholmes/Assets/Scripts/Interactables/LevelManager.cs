@@ -7,21 +7,33 @@ public class LevelManager : Interactable
 {
 
     public GameObject nextLevelPanel;
+    public GameObject[] starUI;
     public string sceneName;
+    [Space]
+    public GameObject pauseMenuPanel;
 
-    GameObject[] starUI;
-    int starsCollected = 0;
+    int starsCollected;
 
     void Start()
     {
-        starUI = GameObject.FindGameObjectsWithTag("StarUI");
+        Cursor.visible = false;
+        starsCollected = 0;
+
+        nextLevelPanel.SetActive(false);
         foreach (GameObject star in starUI)
         {
             star.SetActive(false);
         }
 
-        Cursor.visible = false;
-        nextLevelPanel.SetActive(false);
+        pauseMenuPanel.SetActive(false);
+    }
+
+    void FixedUpdate()
+    {
+        if (Input.GetButton("Cancel"))
+        {
+            Pause();
+        }
     }
 
     public override void PerformAction()
@@ -44,15 +56,36 @@ public class LevelManager : Interactable
         SceneManager.LoadScene(sceneName);
     }
 
-    public void StarCollected()
+    public void StarCollected(int starNumber)
     {
         try
         {
-            starUI[starsCollected++].SetActive(true);
+            starUI[starNumber].SetActive(true);
+            starsCollected++;
         }
         catch (System.IndexOutOfRangeException)
         {
             Debug.Log("There should only be three stars in the scene");
         }
+    }
+
+    void Pause()
+    {
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        pauseMenuPanel.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        pauseMenuPanel.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        Resume();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
