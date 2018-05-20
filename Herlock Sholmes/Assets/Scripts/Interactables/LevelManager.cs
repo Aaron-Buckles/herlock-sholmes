@@ -16,6 +16,7 @@ public class LevelManager : Interactable
 
     void Start()
     {
+        Time.timeScale = 1;
         Cursor.visible = false;
         starsCollected = 0;
 
@@ -85,7 +86,6 @@ public class LevelManager : Interactable
 
     public void Restart()
     {
-        Resume();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
