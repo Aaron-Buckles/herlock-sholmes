@@ -10,9 +10,11 @@ A top-down puzzle game made in Unity for VGDC at UCI in Spring of 2018
 
 ## Colors
 - Brown: 72654D
+- Dark Brown: 514735
+- Light Brown: 90836A
 - Green: B0FFD5
-- Blue:  B0C8FF
-- Red:   FFB0B0
+- Blue: B0C8FF
+- Red: FFB0B0
 
 ## Git Workflow Cheatsheet
 ### Working on develop branch
