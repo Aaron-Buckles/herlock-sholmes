@@ -7,23 +7,23 @@ public class LevelManager : Interactable
 {
 
     public GameObject nextLevelPanel;
-    public GameObject[] starUI;
+    public GameObject[] coinUI;
     public string sceneName;
     [Space]
     public GameObject pauseMenuPanel;
 
-    int starsCollected;
+    int coinsCollected;
 
     void Start()
     {
         Time.timeScale = 1;
         Cursor.visible = false;
-        starsCollected = 0;
+        coinsCollected = 0;
 
         nextLevelPanel.SetActive(false);
-        foreach (GameObject star in starUI)
+        foreach (GameObject coin in coinUI)
         {
-            star.SetActive(false);
+            coin.SetActive(false);
         }
 
         pauseMenuPanel.SetActive(false);
@@ -57,16 +57,16 @@ public class LevelManager : Interactable
         SceneManager.LoadScene(sceneName);
     }
 
-    public void StarCollected(int starNumber)
+    public void CoinCollected(int coinNumber)
     {
         try
         {
-            starUI[starNumber].SetActive(true);
-            starsCollected++;
+            coinUI[coinNumber].SetActive(true);
+            coinsCollected++;
         }
         catch (System.IndexOutOfRangeException)
         {
-            Debug.Log("There should only be three stars in the scene");
+            Debug.Log("There should only be three coins in the scene");
         }
     }
 

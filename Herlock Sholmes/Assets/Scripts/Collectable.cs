@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum ObjectType
 {
-    Star,
+    Coin,
     Other
 };
 
@@ -32,9 +32,9 @@ public class Collectable : MonoBehaviour
     {
         switch (type)
         {
-            case ObjectType.Star:
+            case ObjectType.Coin:
                 gameObject.SetActive(false);
-                levelManager.StarCollected(objectNumber);
+                levelManager.CoinCollected(objectNumber);
                 break;
 
             case ObjectType.Other:
