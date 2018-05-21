@@ -10,13 +10,6 @@ public class MenuManager : MonoBehaviour
     [Tooltip("Element 0 should be the main menu")]
     public GameObject[] menues;
 
-    public GameObject mainMenuMask;
-
-    void Awake()
-    {
-        mainMenuMask.SetActive(true);
-    }
-
     void Start()
     {
         // This try block is temporary
@@ -28,8 +21,6 @@ public class MenuManager : MonoBehaviour
         {
             Debug.Log("Index out of range");
         }
-
-        mainMenuMask.GetComponent<Image>().CrossFadeAlpha(0f, 2.0f, false);
     }
 
 
