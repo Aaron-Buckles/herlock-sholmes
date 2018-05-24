@@ -4,29 +4,37 @@ using UnityEngine;
 
 public enum ObjectType
 {
-    Star,
+    Coin,
     Other
 };
 
 public class Collectable : MonoBehaviour
 {
     public ObjectType type;
+    public int objectNumber;
+
+    LevelManager levelManager;
+
+    private void Start()
+    {
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            collect();
+            Collect();
         }
     }
 
-    private void collect()
+    private void Collect()
     {
         switch (type)
         {
-            case ObjectType.Star:
+            case ObjectType.Coin:
                 gameObject.SetActive(false);
-                Debug.Log("Collect a star");
+                levelManager.CoinCollected(objectNumber);
                 break;
 
             case ObjectType.Other:

@@ -10,10 +10,10 @@ public class SettingsManager : MonoBehaviour
     public TMP_Text currentResDisplay;
 
     Resolution[] resolutions;
-    private int nativeWidth;
-    private int nativeHeight;
+    int nativeWidth;
+    int nativeHeight;
 
-    private int currentResIndex = 0;
+    int currentResIndex = 0;
 
 
     void Awake()
@@ -23,6 +23,7 @@ public class SettingsManager : MonoBehaviour
 
         resolutions = Screen.resolutions;
         currentResIndex = FindCurrentResolution();
+        DisplayCurrentRes();
     }
 
 
