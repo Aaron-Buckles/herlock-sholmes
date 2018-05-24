@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        horizontal = "Horizontal" + playerNumber;
-        vertical = "Vertical" + playerNumber;
+        horizontal = "H" + playerNumber;
+        vertical = "V" + playerNumber;
     }
 
     void Update()
@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
 
     void FindMovementDirection()
     {
-        direction[0] = Input.GetAxis(horizontal);
-        direction[1] = Input.GetAxis(vertical);
+        direction[0] = Input.GetAxisRaw(horizontal);
+        direction[1] = Input.GetAxisRaw(vertical);
 
         LimitDiagonalSpeed();
     }

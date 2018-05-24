@@ -10,7 +10,6 @@ public class MenuManager : MonoBehaviour
     [Tooltip("Element 0 should be the main menu")]
     public GameObject[] menues;
 
-
     void Start()
     {
         // This try block is temporary
