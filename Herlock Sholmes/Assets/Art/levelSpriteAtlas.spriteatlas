@@ -65,8 +65,11 @@ SpriteAtlas:
   - {fileID: 21300016, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300018, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300000, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300002, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300004, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300006, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300008, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
+  - {fileID: 21300010, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300012, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300014, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300088, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
@@ -93,9 +96,6 @@ SpriteAtlas:
   - {fileID: 21300118, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300122, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   - {fileID: 21300116, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
-  - {fileID: 21300010, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
-  - {fileID: 21300004, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
-  - {fileID: 21300002, guid: 6ad1a9ac385ffdc41b789bf9f47440bf, type: 3}
   m_PackedSpriteNamesToIndex:
   - levelSpriteSheet_31
   - levelSpriteSheet_30
@@ -130,8 +130,11 @@ SpriteAtlas:
   - levelSpriteSheet_8
   - levelSpriteSheet_9
   - levelSpriteSheet_0
+  - levelSpriteSheet_1
+  - levelSpriteSheet_2
   - levelSpriteSheet_3
   - levelSpriteSheet_4
+  - levelSpriteSheet_5
   - levelSpriteSheet_6
   - levelSpriteSheet_7
   - levelSpriteSheet_44
@@ -158,8 +161,5 @@ SpriteAtlas:
   - levelSpriteSheet_59
   - levelSpriteSheet_61
   - levelSpriteSheet_58
-  - levelSpriteSheet_5
-  - levelSpriteSheet_2
-  - levelSpriteSheet_1
   m_Tag: levelSpriteAtlas
   m_IsVariant: 0
