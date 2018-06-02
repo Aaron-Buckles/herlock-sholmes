@@ -8,11 +8,11 @@ public class MenuManager : MonoBehaviour
 {
 
     [Tooltip("Element 0 should be the main menu")]
+    public GameObject continueGameButton;
     public GameObject[] menues;
 
     void Start()
     {
-        // This try block is temporary
         try
         {
             OpenMenu(0);
@@ -21,15 +21,22 @@ public class MenuManager : MonoBehaviour
         {
             Debug.Log("Index out of range");
         }
-    }
 
+        if (!PlayerPrefs.HasKey("Level"))
+        {
+            continueGameButton.gameObject.SetActive(false);
+        }
+    }
 
     public void ContinueGame()
     {
-        // This is temporary
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
     }
 
+    public void NewGame()
+    {
+        SceneManager.LoadScene("Level1");
+    }
 
     public void OpenMenu(int menuIndex)
     {
@@ -42,7 +49,6 @@ public class MenuManager : MonoBehaviour
         Button[] buttons = menues[menuIndex].GetComponentsInChildren<Button>(true);
         buttons[0].Select();
     }
-
 
     public void QuitGame()
     {

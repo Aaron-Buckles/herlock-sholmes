@@ -41,6 +41,11 @@ public class LevelManager : Interactable
     {
         Cursor.visible = true;
         nextLevelPanel.SetActive(true);
+
+        if (SceneManager.GetActiveScene().buildIndex + 1 > SceneManager.sceneCount)
+            PlayerPrefs.DeleteKey("Level");
+        else
+            PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public override void UnPerformAction()
