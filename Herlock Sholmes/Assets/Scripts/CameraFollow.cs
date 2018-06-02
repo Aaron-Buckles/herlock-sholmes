@@ -34,7 +34,7 @@ public class CameraFollow : MonoBehaviour
     void Zoom()
     {
         float distance = Distance(players[0], players[1]);
-        float zoomLevel = Mathf.Clamp(distance / 2, maxZoom, minZoom);
+        float zoomLevel = Mathf.Clamp((distance / 2) + 1, maxZoom, minZoom);
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomLevel, smoothness);
     }
 

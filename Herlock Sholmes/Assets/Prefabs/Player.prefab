@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  speed: 0.123
+  speed: 0.1
 --- !u!212 &212313986648530856
 SpriteRenderer:
   m_ObjectHideFlags: 1
