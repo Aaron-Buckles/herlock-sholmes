@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour
 {
 
     public Trigger[] triggerObjects;
+    List<Trigger> queuedTriggerObjects;
 
     void Update()
     {

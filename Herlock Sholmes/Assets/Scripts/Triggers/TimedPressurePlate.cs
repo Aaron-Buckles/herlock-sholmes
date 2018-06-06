@@ -25,8 +25,8 @@ public class TimedPressurePlate : PressurePlate
     {
         yield return new WaitForSeconds(time);
 
-        triggered = false;
         pressurePlateCollider.enabled = true;
+        triggered = false;
     }
 
 }
